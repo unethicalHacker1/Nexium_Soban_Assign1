@@ -1,0 +1,164 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 1rem;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: slideDown 0.6s ease-out;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote results */
+.quoteList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.quoteBox {
+  background: #fff;
+  color: #111;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: zoomIn 0.6s ease;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.noResults {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+/* Button styles */
+.button {
+  background: linear-gradient(to right, #6366f1, #ec4899);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #7c3aed, #d946ef);
+}
+
+/* Back to home link */
+.link {
+  margin-top: 2rem;
+  display: inline-block;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .quoteBox {
+    padding: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+}
